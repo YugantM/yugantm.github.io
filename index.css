@@ -1,38 +1,14 @@
+#logo{
+  font-size: 30px;
+  font-weight: bolder;
+  margin-right: 20px;
+}
+
+#header{
+  font-weight: 650;
+}
+
 body{
   margin: 0px;
   padding: 0px;
-}
-
-a{
-  text-decoration: none;
-}
-
-.container{
-
-}
-
-.header{
-
-}
-
-ul{
-  list-style: none;
-  display: inline-flex;
-  box-sizing:border-box;
-  padding: 0px;
-  margin: 0px;
-}
-
-li{
-  width: 200px;
-  box-sizing:border-box;
-  padding: 15px 0px;
-  height: 50px;
-  color: white;
-  background-color: purple;
-}
-
-li:hover{
-    opacity: 0.85;
-    cursor: pointer;
 }
