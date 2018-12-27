@@ -24,6 +24,12 @@ body{
   padding: 6px 0px;
   font-weight: 600;
   -webkit-box-shadow: inset 0px 1px 40px -1px rgba(95,102,94,1);
--moz-box-shadow: inset 0px 1px 40px -1px rgba(95,102,94,1);
-box-shadow: inset 0px 1px 40px -1px rgba(95,102,94,1);
+  -moz-box-shadow: inset 0px 1px 40px -1px rgba(95,102,94,1);
+  box-shadow: inset 0px 1px 40px -1px rgba(95,102,94,1);
+}
+
+.motto{
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
 }
