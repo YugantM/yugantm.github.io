@@ -1,3 +1,3 @@
-# Hi, My name is Yugant Hadiyal. I am a computer engineer and big fan of open-source community.
+# Hi, My name is Yugant Hadiyal. 
 
-I work in the machine-learning field. Exploring new ideas and implementing them are my job. 
+I am a computer engineer and big fan of open-source community. I work in the machine-learning field. Exploring new ideas and implementing them is my job. 
