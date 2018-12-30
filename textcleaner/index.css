@@ -13,6 +13,10 @@ body{
   padding: 0px;
 }
 
+a{
+  text-decoration: none;
+}
+
 .install{
   height: 40px;
   font-family: Source Code Pro,monospace;
@@ -36,5 +40,53 @@ body{
 
 
 .index{
+  padding-left: 50px;
+
+}
+
+.index a {
+  text-decoration: none;
+}
+
+@keyframes btow {
+  from {background-color: white;}
+  to {background-color: #4f7bff;}
+}
+
+.index li{
+    cursor: pointer;
+    width: 32%;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: #4f7bff;
+    color: white;
+    padding: 15px;
+    margin-bottom: 2px;
+    border: 1px solid #4f7bff;
+    animation-name: btow;
+    animation-duration: 0.3s;
+}
+
+@keyframes wtob {
+  from {background-color: #4f7bff;}
+  to {background-color: white;}
+}
+
+.index li:hover{
+    cursor: pointer;
+    width: 32%;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+    color: #4f7bff;
+    padding: 15px;
+    margin-bottom: 2px;
+    border: 1px solid #4f7bff;
+    animation-name: wtob;
+    animation-duration: 0.2s;
+}
+
+.doc_content{
+  padding: 10px 50px;
   
 }
