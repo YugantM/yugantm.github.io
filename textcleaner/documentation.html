@@ -37,7 +37,7 @@ data cleaning guidelines,">
 <div class="container">
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id='header'>
 
-    <h6><a traget="_blank" href="https://pypi.org/project/textcleaner/" id='logo' style="text-decoration:none;color:black;">TextCleaner <span class="badge badge-secondary">0.4.4</span></h6></a>
+    <h6><a traget="_blank" href="https://pypi.org/project/textcleaner/" id='logo' style="text-decoration:none;color:black;">TextCleaner <span class="badge badge-secondary">0.4.5</span></h6></a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -76,15 +76,16 @@ data cleaning guidelines,">
             TextCleaner is an open source, <a href="license.txt">MIT licenced</a> library for text data pre-processing.</br>
             Ready to make the text cleaning hassle free.
           </p>
-          <div class="install" style="display:inline-block;">pip install textcleaner</div>
           <a href="https://pypi.org/project/textcleaner/0.3.2/#files" traget="blank"><button type="button" class="btn btn-success" style="display:inline-block;">Download Zip</button></a>
+          <div class="install" style="display:inline-block;" id='cont'>pip install textcleaner</div>
+          <button class="copy" data-clipboard-target="#cont"></button>
       </div>
     </div>
 <hr>
     <center><h3 style="margin:20px;text-shadow: 0px 0px 1px rgba(28,110,164,0.43);"> Documenation </h3>
   <div clas="row">
 
-<p class="motto" style="text-align:center;"> The following documentation is for V 0.4.4</p>
+<p class="motto" style="text-align:center;"> The following documentation is for V 0.4.5</p>
     </center>
   </div>
 <hr>
@@ -120,16 +121,39 @@ data cleaning guidelines,">
 <hr>
     <div class="doc_content" id="installation">
   <h4> Installation</h4>
-      <h5>For windows:</h5>
+      <h5>For windows & Linux:</h5>
       <div class="console" id='consol' >pip install textceaner</div>
       <button class="copy" data-clipboard-target="#consol"></button>
+      <br/><br/>
+      <h5>Before importing:</h5>
+      <p>If you have not downloaded the stopwords from <strong>nltk</strong> it will ask you to download while importing it.<br/>
+      To avoid that, write following in the command prompt.</p>
+      <div class="console" id='consol' >python <br/>&gt&gt&gt import nltk <br/>&gt&gt&gt nltk.download('stopwords')</div>
+      <br/>
 
-
+      <i style="font-size:15px;">Aim is to remove dependecies as much as possible in the later versions.</i>
     </div>
   <hr>
     <div class="doc_content" id="bfunctions">
   <h4> Built-in functions</h4>
-      The "textcleaner"
+      <p>All functions are able to read file. They also supports list of string or the class object. Functions can be called
+      in chain with object or individually.</p>
+      <p>Here is the list of all the functions from the library:</p>
+      <ul class='subindex'>
+          <a href="#clear_blank_lines" alt=""><li>clear_blank_lines</li></a>
+          <a href="#copy" alt=""><li>copy</li></a>
+          <a href="#lemming" alt=""><li>lemming</li></a>
+          <a href="#lower_all" alt=""><li>lower_all</li></a>
+          <a href="#main_cleaner" alt=""><li>main_cleaner</li></a>
+          <a href="#remove_numbers" alt=""><li>remove_numbers</li></a>
+          <a href="#remove_stpwrds" alt=""><li>remove_stpwrds</li></a>
+          <a href="#remove_symbols" alt=""><li>remove_symbols</li></a>
+          <a href="#stemming" alt=""><li>stemming</li></a>
+          <a href="#strip_all" alt=""><li>strip_all</li></a>
+          <a href="#token_it" alt=""><li>token_it</li></a>
+      </ul>
+      <b>token_it</b> function is an exception for chain calling because it returns tokens which is not supported body
+      the functions.
 
     </div>
 <hr>

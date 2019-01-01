@@ -44,7 +44,7 @@ a{
 
 }
 
-.index a {
+.index a:hover {
   text-decoration: none;
 }
 
@@ -114,7 +114,7 @@ a{
   color: rgba(0,0,0,0.8);
   padding: 2px 20px;
   font-family: arial, "lucida console", sans-serif;
-  box-shadow: 0px 0px 10px 2px;
+  box-shadow: 0px 0px 5px 1px;
 }
 
 .copy{
@@ -126,4 +126,52 @@ a{
   width: 30px;
   border: none;
   cursor: pointer;
+}
+
+
+.subindex{
+  padding-left: 50px;
+
+}
+
+.subindex a:hover{
+  text-decoration: none;
+}
+
+@keyframes btow {
+  from {background-color: white;}
+  to {background-color: #4f7bff;}
+}
+
+.subindex li{
+    cursor: pointer;
+    width: 32%;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: #4f7bff;
+    color: white;
+    padding: 8px 50px;
+    margin-bottom: 2px;
+    border: 1px solid #4f7bff;
+    animation-name: btow;
+    animation-duration: 0.3s;
+}
+
+@keyframes wtob {
+  from {background-color: #4f7bff;}
+  to {background-color: white;}
+}
+
+.subindex li:hover{
+    cursor: pointer;
+    width: 32%;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: white;
+    color: #4f7bff;
+    padding: 8px 50px;
+    margin-bottom: 2px;
+    border: 1px solid #4f7bff;
+    animation-name: wtob;
+    animation-duration: 0.2s;
 }
