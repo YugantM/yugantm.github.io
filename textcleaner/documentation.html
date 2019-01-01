@@ -214,12 +214,20 @@ data cleaning guidelines,">
       </div>
 <br>
       <h5 id="main_cleaner"> main_cleaner()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      main_cleaner implements all the cleaning methods in one call. It may take a bit to execute but
+      processes data in a manner where user can pass the text data and it will return a fully cleaned and consumable
+      data.
+      <br><br>
+      This function has one editional argument <b>op</b>. Default value of <b>op</b> is <i>'sents'</i> which means
+      the function will return list of sentences. Other value is <i>'words'</i> which means the function will return
+      a flat list of words from the data.
+      <br><br>
+      main_cleaner does not implement <b>token_it</b>.
       <div class="descript" >
-          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <span id='r'>&#35;definition: main_cleaner(self,op='sents',inplace=false)</span>
+          <br> y = tc.main_cleaner(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.main_cleaner()
       </div>
 
       <h5 id="remove_numbers"> remove_numbers()</h5>
