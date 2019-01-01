@@ -137,7 +137,7 @@ data cleaning guidelines,">
     <div class="doc_content" id="bfunctions">
   <h4> Built-in functions</h4>
       <p>All functions are able to read file. They also supports list of string or the class object. Functions can be called
-      in chain with object or individually.</p>
+      in chain with object or individually. Read <a href="#notes">notes</a> under usage section before diving in.</p>
       <p>Here is the list of all the functions from the library:</p>
       <ul class='subindex'>
           <a href="#clear_blank_lines" alt=""><li>clear_blank_lines</li></a>
@@ -161,14 +161,17 @@ data cleaning guidelines,">
           <span id='o'>&gt&gt&gt</span> <span id='g'>from</span> <span id='b'>textcleaner</span> <span id='g'>import</span> <span id='b'>*</span>
           <br><span id='o'>&gt&gt&gt</span> data = tc.document(&ltfile_name&gt)
       </div>
-      <h5><span id='r'>Note:</span></h5>
+      <div id="notes">
+      <h5><span id='r'>Notes:</span></h5>
       <ul>
       <li><i>data is an object of <a href="#bclasses">docment class</a>. data is used as an <b>example</b> for the documentation.</i><br></li>
       <li><i><b>inplace</b> argument is defined to set the nature of the operation of the object.<br> Default argument is <b>inplace = False</b> which means before the operation, the function will
         generate a copy of the object, return the replica and keeping original data unchanged. <br>The other option is <b>inplace = True</b> which means do the operation on the object and return it. </i></li>
       <li><b>token_it</b> function is an exception for chain calling because it returns tokens which is not supported datatype
       for the functions.</li>
-    </ul><br>
+    </ul>
+    </div><br>
+
       <h5 id="clear_blank_lines"> clear_blank_lines()</h5>
       clear_blank_lines is capable of removing all the blank lines from the text-data.
       <div class="descript" >
@@ -176,6 +179,12 @@ data cleaning guidelines,">
           <br> y = tc.clear_blank_lines(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
           <br>y = data.clear_blank_lines()
+      </div>
+      <h5 id="copy"> copy()</h5>
+      copy function is created to make duplicates of the object.
+      <div class="descript" >
+          <span id='r'>&#35;definition: copy(self)</span>
+          <br>y = copy(data)
       </div>
 
 
