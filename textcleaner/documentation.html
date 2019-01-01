@@ -180,16 +180,22 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.clear_blank_lines()
       </div>
-
+<br>
       <h5 id="copy"> copy()</h5>
       copy function is created to make duplicate of the object.
       <div class="descript" >
           <span id='r'>&#35;definition: copy(self)</span>
           <br>y = copy(data)
       </div>
-
+<br>
       <h5 id="lemming"> lemming()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      lemming executes lemmatization. Lemmatization usually refers to doing things properly with the use of a
+      vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and
+      to return the base or dictionary form of a word, which is known as the <i>lemma</i>.
+      <a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html">[source]</a>
+      <br><br>
+      <p>lemming will convert words to lemma with the help of the vocabulary. This library uses lemmatization method from
+        NLTK library.
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
           <br> y = tc.clear_blank_lines(&ltfile_name&gt)
