@@ -195,23 +195,24 @@ data cleaning guidelines,">
       <a href="https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html">[source]</a>
       <br><br>
       <p>lemming will convert words to lemma with the help of the vocabulary. This library uses lemmatization method from
-        NLTK library.
+        NLTK.
       <div class="descript" >
-          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <span id='r'>&#35;definition: lemming(self,inplace=false)</span>
+          <br> y = tc.lemming(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.lemming()
       </div>
-
+<br>
       <h5 id="lower_all"> lower_all()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      lower_all sets all the characters of the text-data to lowercase. Which is desirable in most scenarios of
+      text-data cleaning and furthur processing.
       <div class="descript" >
-          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <span id='r'>&#35;definition: lower_all(self,inplace=false)</span>
+          <br> y = tc.lower_all(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.lower_all()
       </div>
-
+<br>
       <h5 id="main_cleaner"> main_cleaner()</h5>
       clear_blank_lines is capable of removing all the blank lines from the text-data.
       <div class="descript" >
