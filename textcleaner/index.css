@@ -60,8 +60,8 @@ a{
     box-sizing: border-box;
     background-color: #4f7bff;
     color: white;
-    padding: 15px;
-    margin-bottom: 2px;
+    padding: 10px 120px;
+    margin: 1px;
     border: 1px solid #4f7bff;
     animation-name: btow;
     animation-duration: 0.3s;
@@ -79,8 +79,8 @@ a{
     box-sizing: border-box;
     background-color: white;
     color: #4f7bff;
-    padding: 15px;
-    margin-bottom: 2px;
+    padding: 10px 120px;
+    margin: 1px;
     border: 1px solid #4f7bff;
     animation-name: wtob;
     animation-duration: 0.2s;
@@ -174,4 +174,49 @@ a{
     border: 1px solid #4f7bff;
     animation-name: wtob;
     animation-duration: 0.2s;
+}
+
+.python_box{
+  width: 100%;
+  color: black;
+  border: 1px solid rgb(201,201,201);
+  background-color: rgb(250,250,250);
+  box-shadow: 1px 1px 1px #d8d8d8;
+  padding: 10px;
+  line-height: 1.2em;
+  font-size: 1.1em;
+  font-family: monospace;
+}
+
+#g{
+  color: green;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+#r{
+  color: red;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+#b{
+  color: blue;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+#o{
+  color: orange;
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+.doc_content h4{
+  text-decoration: underline;
+  margin-bottom: 30px;
 }
