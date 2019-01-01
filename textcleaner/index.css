@@ -93,3 +93,14 @@ a{
   font-size: 20px;
 
 }
+
+.console{
+  background: black;
+  display: block;
+  box-sizing: border-box;
+  border: 1px solid black;
+  border-radius: 2px;
+  color: white;
+  padding: 2px 20px;
+  font-family: arial, "lucida console", sans-serif;
+}
