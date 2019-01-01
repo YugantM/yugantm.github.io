@@ -141,7 +141,7 @@ data cleaning guidelines,">
       <p>Here is the list of all the functions from the library:</p>
       <ul class='subindex'>
           <a href="#clear_blank_lines" alt=""><li>clear_blank_lines</li></a>
-          <a href="#copy" alt=""><li>copy</li></a>
+          <a href="#copy" alt="copy"><li>copy</li></a>
           <a href="#lemming" alt=""><li>lemming</li></a>
           <a href="#lower_all" alt=""><li>lower_all</li></a>
           <a href="#main_cleaner" alt=""><li>main_cleaner</li></a>
@@ -153,7 +153,7 @@ data cleaning guidelines,">
           <a href="#token_it" alt=""><li>token_it</li></a>
       </ul>
 
-      <br><br>
+      <br>
       <h5>Usage:</h5>
       <div class="python_box">
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span> <span id='r'>&#35;or</span><br>
@@ -164,7 +164,7 @@ data cleaning guidelines,">
       <div id="notes">
       <h5><span id='r'>Notes:</span></h5>
       <ul>
-      <li><i>data is an object of <a href="#bclasses">docment class</a>. data is used as an <b>example</b> for the documentation.</i><br></li>
+      <li><i>data is an object of <a href="#bclasses">document class</a>. data is used as an <b>example</b> for the documentation.</i><br></li>
       <li><i><b>inplace</b> argument is defined to set the nature of the operation of the object.<br> Default argument is <b>inplace = False</b> which means before the operation, the function will
         generate a copy of the object, return the replica and keeping original data unchanged. <br>The other option is <b>inplace = True</b> which means do the operation on the object and return it. </i></li>
       <li><b>token_it</b> function is an exception for chain calling because it returns tokens which is not supported datatype
@@ -180,11 +180,93 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.clear_blank_lines()
       </div>
+
       <h5 id="copy"> copy()</h5>
-      copy function is created to make duplicates of the object.
+      copy function is created to make duplicate of the object.
       <div class="descript" >
           <span id='r'>&#35;definition: copy(self)</span>
           <br>y = copy(data)
+      </div>
+
+      <h5 id="lemming"> lemming()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="lower_all"> lower_all()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="main_cleaner"> main_cleaner()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="remove_numbers"> remove_numbers()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="remove_stpwrds"> remove_stpwrds()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="remove_symbols"> remove_symbols()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="stemming"> stemming()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="strip_all"> strip_all()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
+      </div>
+
+      <h5 id="token_it"> token_it()</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript" >
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.clear_blank_lines()
       </div>
 
 
