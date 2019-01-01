@@ -27,6 +27,17 @@ data cleaning guidelines,">
     <title>TextCleaner | Documenation</title>
     <link rel="icon" type="image/icon" href="logo_mini.png">
     <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="dist/clipboard.min.js">
+    var clip = new Clipboard('.copy');
+
+    clip.on("success", function() {
+      document.body.insertAdjacentHTML('beforeend', '<div>that worked.</div>');
+    });
+    clip.on("error", function() {
+      document.body.insertAdjacentHTML('beforeend', '<div>that didn\'t work.</div>');
+    });
+  </script>
+
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body>
@@ -118,7 +129,8 @@ data cleaning guidelines,">
     <div class="doc_content" id="installation">
   <h4> Installation</h4>
       <h5>For windows:</h5>
-      <div class="console">pip install textceaner</div>
+      <div class="console" id='consol'>pip install textceaner</div>
+      <button class="copy" data-clipboard-target="#consol">button</button>
 
     </div>
   <hr>
