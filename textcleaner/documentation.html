@@ -160,8 +160,16 @@ data cleaning guidelines,">
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span> <span id='r'>&#35;or</span><br>
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> <span id='r'>&#35;or</span><br>
           <span id='o'>&gt&gt&gt</span> <span id='g'>from</span> <span id='b'>textcleaner</span> <span id='g'>import</span> <span id='b'>*</span>
-          <span id='o'>&gt&gt&gt</span> tc.main_cleaner(&ltfile_name&gt)
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(&ltfile_name&gt)
       </div>
+      <h5> clear_blank_lines</h5>
+      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      <div class="descript">
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+      </div>
+
+
     </div>
 <hr>
     <div class="doc_content" id="bclasses">
