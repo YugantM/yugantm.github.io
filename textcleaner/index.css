@@ -241,3 +241,50 @@ hr{
   margin-bottom: 20px;
   margin-top: 10px;
 }
+
+.example{
+  background-color: rgb(240,240,240);
+  height: inherit;
+  padding: 10px;
+}
+
+.heading{
+  display: block;
+  box-sizing: border-box;
+  font-weight: bolder;
+  padding: 3px 10px;
+}
+
+.sample p{
+  margin: 0px;
+}
+.sample{
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  font-weight: lighter;
+  font-family: 'Roboto Mono', monospace;
+  color: brown;
+  margin: 8px 10px;
+  padding: 0px 10px;
+}
+
+.output p{
+  margin: 0px;
+}
+
+.output{
+  display: block;
+  box-sizing: border-box;
+  background-color: white;
+  font-weight: lighter;
+  font-family: 'Roboto Mono', monospace;
+  color: black;
+  margin: 8px 10px;
+  padding: 0px 10px;
+}
+
+.example .python_box{
+  margin: 8px 10px;
+  width: inherit;
+}

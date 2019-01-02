@@ -11,6 +11,7 @@
     <meta property="og:image" content="https://github.com/YugantM/yugantm.github.io/blob/master/textcleaner/logo.svg" />
     <link href="https://pandas.pydata.org/" rel="canonical">
     <link href="https://pypi.org/project/textcleaner/" rel="canonical">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
     <meta name="keywords" content="documentation,data cleaning,nlp,data preprocessing,text data,data cleaning techniques,
 data cleaning in python,
 data cleaning steps,
@@ -126,8 +127,8 @@ data cleaning guidelines,">
       <button class="copy" data-clipboard-target="#consol"></button>
       <br/><br/>
       <h5>For updating:</h5>
-      <div class="console" id='consol' >pip install textcleaner --upgrade</div>
-      <button class="copy" data-clipboard-target="#consol"></button>
+      <div class="console" id='consol2' >pip install textcleaner --upgrade</div>
+      <button class="copy" data-clipboard-target="#consol2"></button>
       <br/><br/>
       <h5>Before importing:</h5>
       <p>If you have not downloaded the stopwords from <strong>nltk</strong> it will ask you to download while importing it.<br/>
@@ -184,6 +185,24 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.clear_blank_lines()
       </div>
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> This is a sample text<br><br><br>
+          with blank lines in it. Call the function and remove them.</p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p> This is a sample text<br>
+          with blank lines in it. Call the function and remove them.</p>
+        </div>
+      </div>
 <!--
 <br>
       <h5 id="copy"> copy()</h5>
@@ -206,6 +225,24 @@ data cleaning guidelines,">
           <br> y = tc.lemming(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
           <br>y = data.lemming()
+      </div>
+
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> Root words are great.<br>It helps to summarize the articles or something.<br>
+          </p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p>Root word are great.<br>It help to summarize the article or something. </p>
+        </div>
       </div>
 <br>
       <h5 id="lower_all"> lower_all()</h5>
@@ -287,6 +324,7 @@ data cleaning guidelines,">
       <h5 id="token_it"> token_it()</h5>
       token_it tokenizes the data. It is an inplace operation by default and can not be changed by argument.
       These tokens are stored into class in different variable named <b>'tokens'</b>.
+      <a href="https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html">[source]</a>
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
           <br> y = tc.clear_blank_lines(&ltfile_name&gt)
