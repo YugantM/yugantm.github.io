@@ -125,6 +125,10 @@ data cleaning guidelines,">
       <div class="console" id='consol' >pip install textcleaner</div>
       <button class="copy" data-clipboard-target="#consol"></button>
       <br/><br/>
+      <h5>For updating:</h5>
+      <div class="console" id='consol' >pip install textcleaner --upgrade</div>
+      <button class="copy" data-clipboard-target="#consol"></button>
+      <br/><br/>
       <h5>Before importing:</h5>
       <p>If you have not downloaded the stopwords from <strong>nltk</strong> it will ask you to download while importing it.<br/>
       To avoid that, write following in the command prompt.</p>
@@ -241,48 +245,54 @@ data cleaning guidelines,">
       </div>
 <br>
       <h5 id="remove_stpwrds"> remove_stpwrds()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      remove_stpwrds removes stopwords from the text with the help of NLTK stopswords vocabulary.
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br> y = tc.remove_stpwrds(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.remove_stpwrds()
       </div>
 <br>
       <h5 id="remove_symbols"> remove_symbols()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      remove_symbols uses REGEX to clear punctuations from the text-data.
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br> y = tc.remove_symbols(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.remove_symbols()
       </div>
 
       <h5 id="stemming"> stemming()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      stemming uses SnowBall Stemmer from NLTK library to convert words to their respective root word.
+      <a href="http://www.nltk.org/howto/stem.html">[source]</a>
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br> y = tc.stemming(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.stemming()
       </div>
 
       <h5 id="strip_all"> strip_all()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      strip_all strips off '.\n' from each line of the file. Moreover it also clears unnecessary whitespace from the text as well
+      with help of REGEX.
+      <br><br>
+      It also has one argument <b>x</b> with default value of '.\n' which can be changed as per the user's requirement.
       <div class="descript" >
-          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <span id='r'>&#35;definition: clear_blank_lines(self,x='.\n',inplace=false)</span>
+          <br> y = tc.strip_all(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
+          <br>y = data.strip_all()
       </div>
 
       <h5 id="token_it"> token_it()</h5>
-      clear_blank_lines is capable of removing all the blank lines from the text-data.
+      token_it tokenizes the data. It is an inplace operation by default and can not be changed by argument.
+      These tokens are stored into class in different variable named <b>'tokens'</b>.
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
           <br> y = tc.clear_blank_lines(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
           <br>y = data.clear_blank_lines()
+          <br>y.tokens
       </div>
 
 
