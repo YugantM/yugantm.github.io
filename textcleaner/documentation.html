@@ -167,7 +167,7 @@ data cleaning guidelines,">
           <br><span id='o'>&gt&gt&gt</span> data = tc.document(&ltfile_name&gt)
       </div>
       <div id="notes">
-      <h5><span id='r'>Notes:</span></h5>
+      <h5 style="background-color: white;"><span id='r'>Notes:</span></h5>
       <ul>
       <li><i>data is an object of <a href="#bclasses">document class</a>. data is used as an <b>example</b> for the documentation.</i><br></li>
       <li><i><b>inplace</b> argument is defined to set the nature of the operation of the object.<br> Default argument is <b>inplace = False</b> which means before the operation, the function will
@@ -177,7 +177,7 @@ data cleaning guidelines,">
     </ul>
     </div><br>
 
-      <h5 id="clear_blank_lines"> clear_blank_lines()</h5>
+      <h5 id="clear_blank_lines"> clear_blank_lines( )</h5>
       clear_blank_lines is capable of removing all the blank lines from the text-data.
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
@@ -212,7 +212,7 @@ data cleaning guidelines,">
           <br>y = copy(data)
       </div>  -->
 <br>
-      <h5 id="lemming"> lemming()</h5>
+      <h5 id="lemming"> lemming( )</h5>
       lemming executes lemmatization. Lemmatization usually refers to doing things properly with the use of a
       vocabulary and morphological analysis of words, normally aiming to remove inflectional endings only and
       to return the base or dictionary form of a word, which is known as the <i>lemma</i>.
@@ -236,16 +236,16 @@ data cleaning guidelines,">
         <div class="heading">Code:</div>
         <div class="python_box">
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
-          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
-          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> tc.document(sample_text).lemming() <span id='r'>&#35;chain calling<span>
         </div>
         <div class="heading">Output:</div>
         <div class="output">
           <p>Root word are great.<br>It help to summarize the article or something. </p>
         </div>
+        <div class="footnote"> you can see conversions like: words to <b>word</b>, helps to <b>help</b>, articles to <b>article</b></div>
       </div>
 <br>
-      <h5 id="lower_all"> lower_all()</h5>
+      <h5 id="lower_all"> lower_all( )</h5>
       lower_all sets all the characters of the text-data to lowercase. Which is desirable in most scenarios of
       text-data cleaning and furthur processing.
       <div class="descript" >
@@ -254,6 +254,23 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.lower_all()
       </div>
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> In SoMe Cases we MighT geT the data Like tHis.<br>
+          </p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> tc.document(sample_text).lower_all() <span id='r'>&#35;chain calling<span>
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p>in some cases we might get the data like this.</p>
+        </div>
+      </div>
+
 <br>
       <h5 id="main_cleaner"> main_cleaner()</h5>
       main_cleaner implements all the cleaning methods in one call. It may take a bit to execute but
@@ -271,6 +288,26 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.main_cleaner()
       </div>
+
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> This is a SamPle tExt.WiTh blank spaces&nbsp &nbsp &nbsp , With symbols like %^(#,<br><br><br>
+          with blank lInes iN it. CaLl the fuNctions aNd reMoVe them.</p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p> sample text with blank space symbol like<br>
+            blank line call function remove</p>
+        </div>
+        </div>
+
 <br>
       <h5 id="remove_numbers"> remove_numbers()</h5>
       remove_numbers uses regular expression to detect the numbers in the data and removes it.

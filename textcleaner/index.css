@@ -95,7 +95,14 @@ hr{
   padding-left: 50px;
   padding-right: 350px;
   font-size: 20px;
+}
 
+#bfunctions h5{
+  color: white;
+  width: inherit;
+  font-weight: bolder;
+  background-color: #4f7bff;
+  padding: 10px 10px;
 }
 
 .console{
@@ -246,6 +253,11 @@ hr{
   background-color: rgb(240,240,240);
   height: inherit;
   padding: 10px;
+}
+
+.footnote{
+  padding: 0px 20px;
+  font-style: italic;
 }
 
 .heading{
