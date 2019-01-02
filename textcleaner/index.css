@@ -263,7 +263,7 @@ hr{
 .heading{
   display: block;
   box-sizing: border-box;
-  font-weight: bolder;
+  font-weight: 600;
   padding: 3px 10px;
 }
 

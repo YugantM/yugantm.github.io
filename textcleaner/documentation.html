@@ -195,7 +195,7 @@ data cleaning guidelines,">
         <div class="python_box">
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
           <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
-          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines()
         </div>
         <div class="heading">Output:</div>
         <div class="output">
@@ -299,7 +299,7 @@ data cleaning guidelines,">
         <div class="python_box">
           <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
           <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
-          <br><span id='o'>&gt&gt&gt</span> data.clear_blank_lines(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.main_cleaner()
         </div>
         <div class="heading">Output:</div>
         <div class="output">
@@ -317,6 +317,23 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.remove_numbers()
       </div>
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> name of the variables can not be initiated by numbers like : 007bond, 88myfunction</p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> data.lower_all()
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p> name of the variables can not be initiated by numbers like : bond, myfunction</p>
+        </div>
+        </div>
+
 <br>
       <h5 id="remove_stpwrds"> remove_stpwrds()</h5>
       remove_stpwrds removes stopwords from the text with the help of NLTK stopswords vocabulary.
@@ -374,20 +391,20 @@ data cleaning guidelines,">
     </div>
 <hr>
     <div class="doc_content" id="bclasses">
-  <h4> Built-in Classes</h4>
-      The "textcleaner"
+  <h4 style="display:inline-flex;"> Built-in Classes</h4> &nbsp<img src="cons.gif" alt="404" style="display:inline-flex;">
+       <h2 > Under Constructions</h2>
 
     </div>
   <hr>
     <div class="doc_content" id="updates">
-  <h4> Future updates</h4>
-      The "textcleaner"
+  <h4 style="display:inline-flex;"> Future updates</h4> &nbsp<img src="cons.gif" alt="404" style="display:inline-flex;">
+       <h2 > Under Constructions</h2>
 
     </div>
 <hr>
     <div class="doc_content" id="report">
-  <h4> How to report</h4>
-      The "textcleaner"
+  <h4 style="display:inline-flex;"> How to report</h4> &nbsp<img src="cons.gif" alt="404" style="display:inline-flex;">
+       <h2 > Under Constructions</h2>
 
     </div>
   <hr>
