@@ -1,3 +1,3 @@
-# Hi, My name is Yugant Hadiyal. 
+# Click on the following link to find out more 
 
-I am a computer engineer and big fan of open-source community. I work in the machine-learning field. Exploring new ideas and implementing them is my job. 
+[Profile Link](https://yugantm.github.io/)
