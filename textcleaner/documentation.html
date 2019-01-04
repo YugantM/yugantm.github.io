@@ -398,6 +398,24 @@ data cleaning guidelines,">
           <br>y = data.stemming()
       </div>
 
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p> Root words are great.It helps to summarize the articles or something.<br>
+          </p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> tc.document(sample_text).stemming()
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p>root word are great.it help to summar the articl or something.</p>
+        </div>
+        <div class="footnote"> Stemming uses rules instead of dictionary of words to convert words to their root words. This affects the spelling of some words. Use <a href="#lemming">lemmatization</a> if spelling is important.</div>
+      </div>
+<br>
       <h5 id="strip_all"> strip_all( )</h5>
       strip_all strips off '.\n' from each line of the file. Moreover it also clears unnecessary whitespace from the text as well
       with help of REGEX.
@@ -409,17 +427,51 @@ data cleaning guidelines,">
           <br><span id='r'>&#35;or</span>
           <br>y = data.strip_all()
       </div>
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p>This is the first &nbsp;&nbsp; statement.<br>This &nbsp; is a &nbsp;&nbsp;second statement.<br>
+          </p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> tc.document(sample_text).stemming()
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p>This is the first statement <br>This is a second statement</p>
+        </div>
+        <div class="footnote"> strip_all strips extra whitespaces too</div>
+      </div>
 
+<br>
       <h5 id="token_it"> token_it( )</h5>
       token_it tokenizes the data. It is an inplace operation by default and can not be changed by argument.
       These tokens are stored into class in different variable named <b>'tokens'</b>.
       <a href="https://nlp.stanford.edu/IR-book/html/htmledition/tokenization-1.html">[source]</a>
       <div class="descript" >
           <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
-          <br> y = tc.clear_blank_lines(&ltfile_name&gt)
+          <br> y = tc.token_it(&ltfile_name&gt)
           <br><span id='r'>&#35;or</span>
-          <br>y = data.clear_blank_lines()
-          <br>y.tokens
+          <br>y = data.token_it()
+      </div>
+
+      <div class="example">
+        <div class="heading">sample_text:</div>
+        <div class="sample">
+          <p>All dogs were wild but after long period of taming now they are domestic pets.<br>
+          </p>
+        </div>
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> tc.document(sample_text).token_it()
+        </div>
+        <div class="heading">Output:</div>
+        <div class="output">
+          <p>[['All','dogs','were','wild','but','after','long','period','of','taming',<br>'now','they','are','domestic','pets','.']]</p>
+        </div>
       </div>
 
 
