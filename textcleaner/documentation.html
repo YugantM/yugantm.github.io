@@ -146,7 +146,7 @@ data cleaning guidelines,">
       <p>Here is the list of all the functions from the library:</p>
       <ul class='subindex'>
           <a href="#clear_blank_lines" alt=""><li>clear_blank_lines</li></a>
-          <!--<a href="#copy" alt="copy"><li>copy</li></a>-->
+          <a href="#copy" alt="copy"><li>copy</li></a>
           <a href="#lemming" alt=""><li>lemming</li></a>
           <a href="#lower_all" alt=""><li>lower_all</li></a>
           <a href="#main_cleaner" alt=""><li>main_cleaner</li></a>
@@ -172,8 +172,8 @@ data cleaning guidelines,">
       <li><i>data is an object of <a href="#bclasses">document class</a>. data is used as an <b>example</b> for the documentation.</i><br></li>
       <li><i><b>inplace</b> argument is defined to set the nature of the operation of the object.<br> Default argument is <b>inplace = False</b> which means before the operation, the function will
         generate a copy of the object, return the replica and keeping original data unchanged. <br>The other option is <b>inplace = True</b> which means do the operation on the object and return it. </i></li>
-      <li><b>token_it</b> function is an exception for chain calling because it returns tokens which is not supported datatype
-      for the functions.</li>
+      <li><b>token_it</b> function is an exception for chain calling because it returns tokens and its format is not supported by rest of the functions. Call this function
+      after all the cleaning if tokens need to be generated.</li>
     </ul>
     </div><br>
 
@@ -203,14 +203,24 @@ data cleaning guidelines,">
           with blank lines in it. Call the function and remove them.</p>
         </div>
       </div>
-<!--
+
 <br>
-      <h5 id="copy"> copy()</h5>
+      <h5 id="copy"> copy( )</h5>
       copy function is created to make duplicate of the object.
       <div class="descript" >
-          <span id='r'>&#35;definition: copy(self)</span>
-          <br>y = copy(data)
-      </div>  -->
+          <span id='r'>&#35;definition: clear_blank_lines(self,inplace=false)</span>
+          <br> y = tc.textcleaner.copy(&ltdocument_object&gt)
+          <br><span id='r'>&#35;or</span>
+          <br>y = data.copy()
+      </div>
+      <div class="example">
+        <div class="heading">Code:</div>
+        <div class="python_box">
+          <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+          <br><span id='o'>&gt&gt&gt</span> data = tc.document(sample_text)
+          <br><span id='o'>&gt&gt&gt</span> duplicate = data.copy()
+        </div>
+      </div>
 <br>
       <h5 id="lemming"> lemming( )</h5>
       lemming executes lemmatization. Lemmatization usually refers to doing things properly with the use of a
@@ -479,29 +489,169 @@ data cleaning guidelines,">
 <hr>
     <div class="doc_content" id="bclasses">
   <h4 style="display:inline-flex;"> Built-in Classes</h4>
+  <h5 id="token_it">i) document:</h5>
+  document class contains metadata of the file in variables. It has some well defined <b>default methods</b> and
+  it also has built-in functions listed below in the class structure.<br><br>
   <div class="example">
     <div class="heading">class structure</div>
 
-    <div class="sample">
+    <div class="sample" >
       <p><span id='b'>class</span> document:
-          <br>&nbsp&nbsp&nbsp&nbspfile_name: <i style="font-size:16px;">"&ltfile_name&gt"</i>
-          <br>&nbsp&nbsp&nbsp&nbspdata = <i style="font-size:16px;">"this variable contains data"</i>
-          <br>&nbsp&nbsp&nbsp&nbspwords = <i style="font-size:16px;">"list of words by lines"</i>
-          <br>&nbsp&nbsp&nbsp&nbsptokens = <i style="font-size:16px;">"tokens will be generated after call of token_it"</i>
-          <br>&nbsp&nbsp&nbsp&nbspcount_sentences = <i style="font-size:16px;">"count of sentences"</i>
-          <br>&nbsp&nbsp&nbsp&nbspcount_words = <i style="font-size:16px;">"count of words"</i>
-          <br>&nbsp&nbsp&nbsp&nbspeach_word_count = <i style="font-size:16px;">"dictionary where key=word & value=count"</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='r'>&#35;class variables</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">file_name: <span id='o'>"&ltfile_name&gt"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">data = <span id='o'>"this variable contains data"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">words = <span id='o'>"list of words by lines"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">tokens = <span id='o'>"tokens will be generated after call of token_it"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">count_sentences = <span id='o'>"count of sentences"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">count_words = <span id='o'>"count of words"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">each_word_count = <span id='o'>"dictionary where key=word & value=count"</span></i>
+          <br>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='r'>&#35;class functions</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> clear_blank_lines(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> lemming(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> lower_all(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> main_cleaner(self,op=<span id='r'>'sents'</span>,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_numbers(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_stpwrds(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_symbols(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> stemming(self,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> strip_all(self,x=<span id='r'>'.\n'</span>,inplace=<span id='g'>False</span>)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> token_it(self)</i>
       </p>
     </div>
   </div>
+  <br>Default methods are written to make class more accessible. These make the object user-friendly. Read the object-usage below.<br><br>
+  <h5 id="object_usage">object-usage</h5>
+  <div class="example">
+    <div class="heading">"file.txt"</div>
+    <div class="sample">
+      <p> This is statement1.<br>This is statement2.<br>This is statement3.<br>
+      </p>
+    </div>
+    <div class="heading">Creating object:</div>
+    <div class="python_box">
+      <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
+      <br><span id='o'>&gt&gt&gt</span> doc = tc.document(<span id='r'>"file.txt"</span>)
+    </div>
+    <br>
+    <div class="heading">Printing on console:</div>
+    <div class="python_box" style="margin-bottom:0px;">
+      <span id='o'>&gt&gt&gt</span> doc
+    </div>
+
+    <div class="output" style="margin-top:0px;">
+      <p> This is statement1.<br>This is statement2.<br>This is statement3.<br>
+      </p>
+    </div>
+<br>
+    <div class="heading">Printing using function:</div>
+    <div class="python_box" style="margin-bottom:0px;">
+      <span id='o'>&gt&gt&gt</span> <span id="g">print</span>(doc)
+    </div>
+
+    <div class="output" style="margin-top:0px;">
+      <p> This is statement1.<br>This is statement2.<br>This is statement3.<br>
+      </p>
+    </div>
+<br>
+    <div class="heading">Using in loop:</div>
+    <div class="python_box" style="margin-bottom:0px;">
+      <span id='o'>&gt&gt&gt</span> <span id="g">for</span> i <span id="g">in</span> doc:<span id="g">print</span>(i)
+
+    </div>
+
+    <div class="output" style="margin-top:0px;">
+      <p> This is statement1.<br>This is statement2.<br>This is statement3.<br>
+      </p>
+    </div>
+<br>
+        <div class="heading">Accessing the variables:</div>
+
+        <div class="python_box" style="margin-bottom:0px;">
+          <span id='o'>&gt&gt&gt</span> doc.file_name
+
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+          <p> "file.txt"</p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+          <span id='o'>&gt&gt&gt</span> doc.data
+
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+          <p> ['This is statement1.','This is statement2.','This is statement3.']
+          </p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+          <span id='o'>&gt&gt&gt</span> doc.words
+
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+          <p> [['this', 'is', 'statement'],
+            <br>&nbsp['this', 'is', 'statement'],
+            <br>&nbsp['this', 'is', 'statement']]
+          </p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+              <span id='o'>&gt&gt&gt</span> doc.token_it()
+              <br><span id='o'>&gt&gt&gt</span> doc.tokens
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+          <p> [['This', 'is', 'statement1', '.'],
+            <br>&nbsp['This', 'is', 'statement2', '.'],
+            <br>&nbsp['This', 'is', 'statement3', '.']]
+          </p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+              <span id='o'>&gt&gt&gt</span> doc.count_sentences
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+          <p>3</p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+              <span id='o'>&gt&gt&gt</span> doc.count_words
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+            <p>9</p>
+        </div>
+<br>
+        <div class="python_box" style="margin-bottom:0px;">
+              <span id='o'>&gt&gt&gt</span> doc.each_word_count
+        </div>
+
+        <div class="output" style="margin-top:0px;">
+              <p>{'is': 3, 'statement': 3, 'this': 3}</p>
+        </div>
 
 
+  </div>
 
     </div>
   <hr>
     <div class="doc_content" id="updates">
-  <h4 style="display:inline-flex;"> Future updates</h4> &nbsp<img src="cons.gif" alt="404" style="display:inline-flex;">
-       <h2 > Under Constructions</h2>
+  <h4 style="display:inline-flex;"> Future updates</h4>
+  <ul class="future_updates">
+    <li>corpus class</li>
+    <li>TF-IDF</li>
+    <li>n-gram</li>
+    <li>BOW</li>
+    <li>words dictionary</li>
+    <li>rare words: extraction and removal</li>
+    <li>functions in C/C++</li>
+    <li>better website UI</li>
+  </ul>
+
 
     </div>
 <hr>
