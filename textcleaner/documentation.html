@@ -496,42 +496,28 @@ data cleaning guidelines,">
     <div class="heading">class structure</div>
 
     <div class="sample" >
-      <p><span id='b'>class</span> document:
+      <p><span id='b'>class</span> corpus:
           <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='r'>&#35;class variables</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">file_name: <span id='o'>"&ltfile_name&gt"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">root: <span id='o'>"&ltfolder_path&gt"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">files = <span id='o'>"list of files in the folder"</span></i>
           <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">data = <span id='o'>"this variable contains data"</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">words = <span id='o'>"list of words by lines"</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">tokens = <span id='o'>"tokens will be generated after call of token_it"</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">count_sentences = <span id='o'>"count of sentences"</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">count_words = <span id='o'>"count of words"</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">each_word_count = <span id='o'>"dictionary where key=word & value=count"</span></i>
-          <br>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='r'>&#35;class functions</span></i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> clear_blank_lines(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> lemming(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> lower_all(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> main_cleaner(self,op=<span id='r'>'sents'</span>,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_numbers(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_stpwrds(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> remove_symbols(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> stemming(self,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> strip_all(self,x=<span id='r'>'.\n'</span>,inplace=<span id='g'>False</span>)</i>
-          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;"><span id='b'>def</span> token_it(self)</i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">total_sentences = <span id='o'>"no of sentences of the corpus"</span></i>
+          <br>&nbsp&nbsp&nbsp&nbsp<i style="font-size:16px;">total_words = <span id='o'>"count of words of the corpus"</span></i>
       </p>
     </div>
   </div>
   <br>Default methods are written to make class more accessible. These make the object user-friendly. Read the object-usage below.<br><br>
   <h5 id="object_usage">object-usage</h5>
   <div class="example">
-    <div class="heading">"file.txt"</div>
+    <div class="heading">"C:/folder" or "C:\folder"</div>
     <div class="sample">
-      <p> This is statement1.<br>This is statement2.<br>This is statement3.<br>
+      <p> file1.txt<br>file2.txt<br>file3.txt<br>
       </p>
     </div>
     <div class="heading">Creating object:</div>
     <div class="python_box">
       <span id='o'>&gt&gt&gt</span> <span id='g'>import</span> <span id='b'>textcleaner</span> as <span id='b'>tc</span>
-      <br><span id='o'>&gt&gt&gt</span> doc = tc.document(<span id='r'>"file.txt"</span>)
+      <br><span id='o'>&gt&gt&gt</span> corp = tc.corpus(<span id='r'>"folder_path"</span>)
     </div>
     <br>
     <div class="heading">Printing on console:</div>
