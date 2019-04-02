@@ -27,3 +27,37 @@ body{
   padding: 0px 20px;
   outline: none;
 }
+
+.search_engine button{
+    height: 48px;
+    background-color: #0b4956;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    width: 100px;
+}
+
+.search_engine button:hover{
+    height: 48px;
+    background-color: #0b4956;
+    color: white;
+    border-radius: 2px;
+    border: 1px solid #D0D0D0;
+    width: 100px;
+}
+
+.main_box{
+
+}
+
+.search_engine .options{
+  margin-top: 10px;
+  width: 15px;
+  height: 15px;
+}
+
+.search_engine .options:focus{
+  margin-top: 10px;
+  width: 15px;
+  height: 15px;
+}
