@@ -46,8 +46,11 @@ body{
     width: 100px;
 }
 
-.main_box{
-
+.search_engine .options:checked:after {
+  margin-top: 10px;
+  width: 15px;
+  height: 15px;
+  background-color: #0b4956;
 }
 
 .search_engine .options{
@@ -60,4 +63,9 @@ body{
   margin-top: 10px;
   width: 15px;
   height: 15px;
+}
+
+.city_list{
+  width: 150px;
+  height: 48px;
 }
