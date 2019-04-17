@@ -24,16 +24,20 @@
       document.getElementById('login').setAttribute("class", "poplogin");
     }
 
-  function cclear()
+  function cclear(e)
     {
-      document.getElementById('login').setAttribute("class", "nonepoplogin");
+        if (window.event.target==e){
+          document.getElementById('login').setAttribute("class", "nonepoplogin");
+          //console.log("e",e);
+          //console.log("w",window.event);
+        }
     }
 
   </script>
   <body>
 
 
-    <div class="nonepoplogin" id="login" onclick="cclear()">
+    <div class="nonepoplogin" id="login" onclick="cclear(this)">
 
       <form class="login" action="index.html" method="post">
 
@@ -41,7 +45,7 @@
         <input type="text" name="search" value="" placeholder="Username "><br/>
         <input type="password" name="search" value="" placeholder="Password"><br/>
         <button type="button" name="button">Login</button>
-        <button type="button" name="button" onclick="cclear()">Cancel</button>
+        <button type="button" name="button" onclick="cclear(this)" id="cancel">Cancel</button>
         <br/>
         <a href="signup.html">Signup</a> to create an account
         <br>
