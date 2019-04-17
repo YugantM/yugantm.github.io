@@ -3,6 +3,58 @@ body{
   margin: 0px;
 }
 
+.nonepoplogin{
+  display: none;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 600px;
+  padding: 80px 500px;
+  text-align: center;
+  position: absolute;
+  z-index: 99999;
+  background-color: rgba(11,11,11,0.5);
+}
+
+.poplogin{
+  
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  min-height: 600px;
+  padding: 80px 500px;
+  text-align: center;
+  position: absolute;
+  z-index: 99999;
+  background-color: rgba(11,11,11,0.5);
+}
+
+.poplogin input{
+  padding: 10px;
+  margin-top:5px;
+}
+
+.poplogin form{
+  z-index: 0;
+  opacity: 1;
+  background-color: white;
+  border-radius: 5px;
+  padding: 50px 0px;
+}
+
+.poplogin button{
+  height: 48px;
+  background-color: #0b4956;
+  color: white;
+  border-radius: 2px;
+  border: 1px solid transparent;
+  width: 90px;
+  margin: 10px 0px;
+}
+
+
 .logo {
   width: 120px;
   height: 120px;
@@ -86,6 +138,10 @@ body{
     border-radius: 2px;
     border: 1px solid #D0D0D0;
     width: 100px;
+    background-image: radial-gradient( #10677a,#093741);
+    -webkit-box-shadow: 0px 0px 5px 1px rgba(19,124,147,0.49);
+-moz-box-shadow: 0px 0px 5px 1px rgba(19,124,147,0.49);
+box-shadow: 0px 0px 5px 1px rgba(19,124,147,0.49);
 }
 
 .search_engine .options:checked:after {
@@ -110,4 +166,37 @@ body{
 .city_list{
   width: 150px;
   height: 48px;
+}
+
+#active{
+  background-color: black;
+  color: white;
+}
+
+
+.signup input{
+  border-radius: 3px;
+  border: 1px solid gray;
+  background-color: white;
+  margin: 2px 0px;
+  height: 40px;
+  width: 20%;
+}
+
+.signup button{
+  width: 10%;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+.signup button:hover{
+  width: 10%;
+  font-weight: bolder;
+  font-size: 20px;
+  margin: 5px 0px;
+}
+
+.close{
+  position: absolute;
 }

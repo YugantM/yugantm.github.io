@@ -14,8 +14,39 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>  </head>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <script type="text/javascript">
+
+  function popup()
+    {
+      document.getElementById('login').setAttribute("class", "poplogin");
+    }
+
+  function cclear()
+    {
+      document.getElementById('login').setAttribute("class", "nonepoplogin");
+    }
+
+  </script>
   <body>
+
+
+    <div class="nonepoplogin" id="login" onclick="cclear()">
+
+      <form class="login" action="index.html" method="post">
+
+        <img src="logo.png" alt="logo" class="logo"><br/>
+        <input type="text" name="search" value="" placeholder="Username "><br/>
+        <input type="password" name="search" value="" placeholder="Password"><br/>
+        <button type="button" name="button">Login</button>
+        <button type="button" name="button" onclick="cclear()">Cancel</button>
+        <br/>
+        <a href="signup.html">Signup</a> to create an account
+        <br>
+      </form>
+    </div>
 
         <section class="search_engine">
           <center>
@@ -24,7 +55,7 @@
             <li>FAQs</li>
             <li>About</li>
             <li>Contact</li>
-            <li>Login/Signup</li>
+            <li onclick="popup()">Login/Signup</li>
           </ul>
         </center>
               <center>
@@ -34,8 +65,10 @@
                   <h1> Property Listing Site of Mozambique</h1>
                   <br>
                   <div class="main_box">
+
                   <input class="options" type="radio" name="how" value=""> Rent
                   <input class="options" type="radio" name="how" value=""> Purchase<br>
+
                   <input type="text" name="search" value="" placeholder="type in the location ">
                   <select name="cities" class="city_list">
                     <option value="City">City</option>
